@@ -59,6 +59,20 @@ return {
 
   {
     "kyazdani42/nvim-tree.lua",
-    opts = require "configs.nvim-tree"
-  }
+    opts = require "configs.nvim-tree",
+  },
+
+  {
+    "karb94/neoscroll.nvim",
+    event = "WinScrolled",
+    config = function()
+      require("neoscroll").setup {
+        easing_function = "quadratic", -- options : "quadratic", "cubic", "sine", "circle"
+        hide_cursor = true,
+        stop_eof = true,
+        respect_scrolloff = false,
+        cursor_scrolls_alone = true,
+      }
+    end,
+  },
 }
