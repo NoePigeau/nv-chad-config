@@ -15,3 +15,12 @@ map(
   require "mappings.replace-quotes",
   { desc = "Replace quotes by backticks", noremap = true, silent = true }
 )
+
+map("n", "grr", function()
+  require("telescope.builtin").lsp_references {
+    prompt_title = " LSP References",
+    show_line = true,
+    trim_text = true,
+    initial_mode = "normal"
+  }
+end, { silent = true, noremap = true, desc = "Go to References (Telescope)" })
