@@ -93,4 +93,9 @@ return {
       { "<leader>gY", "<cmd>GitLink! blame<cr>", mode = { "n", "v" }, desc = "Open git link" },
     },
   },
+
+  {
+    "tpope/vim-abolish",
+    lazy = false,
+  },
 }
