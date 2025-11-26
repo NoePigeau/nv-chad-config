@@ -21,6 +21,6 @@ map("n", "grr", function()
     prompt_title = " LSP References",
     show_line = true,
     trim_text = true,
-    initial_mode = "normal"
+    initial_mode = "normal",
   }
 end, { silent = true, noremap = true, desc = "Go to References (Telescope)" })

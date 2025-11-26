@@ -1,23 +1,6 @@
 require("nvchad.configs.lspconfig").defaults()
 
-local servers = { "html", "cssls", "ts_ls", "rust_analyzer", "jsonls" }
-
-vim.lsp.config.ts_ls = vim.tbl_deep_extend("force", vim.lsp.config.ts_ls or {}, {
-  settings = {
-    typescript = {
-      preferences = {
-        includeCompletionsForModuleExports = true,
-        includeCompletionsForImportStatements = true,
-        importModuleSpecifier = "non-relative",
-        -- importModuleSpecifierEnding = "js",
-        autoImportFileExcludePatterns = {
-          "build/**/*.js",
-          "build/**/*.d.ts",
-        },
-      },
-    },
-  },
-})
+local servers = { "html", "cssls", "ts_ls", "rust_analyzer", "jsonls", "tailwindcss", "emmet_ls" }
 
 vim.lsp.enable(servers)
 
